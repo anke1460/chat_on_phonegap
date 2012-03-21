@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+       <link rel="stylesheet" href="lib/sencha-touch.css" type="text/css">            
+       <link rel="stylesheet" href="resources/stylesheets/style.css" type="text/css">
+       <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+       <script type="text/javascript" src="data/general_data.js"></script>
+       <script type="text/javascript" src="lib/sencha-touch-all-debug.js"></script>
+       <script type="text/javascript" src="lib/twitter_proxy.js"></script>
+       <script type="text/javascript" src="lib/upload_image.js"></script>
+       <script type="text/javascript" src="lib/base64-binary.js"></script>
+       <script type="text/javascript" src="lib/audio.js"></script>
+       <script type="text/javascript" src="lib/id3v2.js"></script>
+	   <script type="text/javascript" src="lib/socket.js"></script>
+	   <script type="text/javascript" src="lib/chat_client.js"></script>
+	   <script type="text/javascript" src="app.js"></script>    
+       <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+       <script type="text/javascript">
+		console.log('load')
+		if (Ext.os.is.iOS) {
+		   Ext.ip = 'http://192.168.1.101:3000';
+          document.addEventListener('deviceready',mainLaunch,false);
+		} else {
+         Ext.ip = 'http://127.0.0.1:3000';
+	     mainLaunch();
+		}
+       </script>
+    </head>
+    <body>
+    </body></html>
